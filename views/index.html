@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="//kit.fontawesome.com/bc99dafff1.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <title>Socket Talk</title>
+</head>
+
+<body>
+    <div id="app" class="noselect">
+        <div id="chatList">
+            <!-- <div class="notiBox">
+                <span class="content">NY64이(가) 참여했습니다</span>
+            </div> -->
+            <!-- <div class="messageBox">
+                <div class="profile">
+                    <img src="https://api.dicebear.com/6.x/identicon/png?seed=Felix" alt="">
+                </div>
+                <div class="content">
+                    <div class="row">
+                        <span class="username">NY64</span>
+                        <span class="timestamp">2023/06/01 오전
+                            11:42</span>
+                    </div>
+                    <div class="row">
+                        <span class="message">aaaaaaaaaaaaaaa</span>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+        <div class="inputBox">
+            <form id="submitMessageForm">
+                <input type="text" id="messageInput" placeholder="메세지 입력" autofocus autocomplete="off">
+                <div class="line"></div>
+                <button id="sendButton"><i class="fa-solid fa-paper-plane"></i></button>
+            </form>
+        </div>
+    </div>
+</body>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/main.js"></script>
+
+</html>
