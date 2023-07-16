@@ -136,13 +136,37 @@ socket.on("message", data => {
 socket.on("rename", data => (userdata = data));
 
 socket.on("userJoined", data => {
-	const notiDiv = createNotiElement(`${data.username} 이(가) 참여했습니다. [${data.userSize}명 온라인]`);
+
+
+
+
+	
+	// TODO 5: createNotiElement 함수의 매개변수로 변수와 상수 부분에서 배웠던 백틱을 활용해서 data.username과 data.userSize 변수를 포함하는 문자열을 넣어주세요.
+	// `${data.username} ${data.userSize}`
+	const notiDiv = createNotiElement(이 곳에 코드를 작성해주세요);
+
+
+
+
+
 	new Notification(`${data.username} 이(가) 참여했습니다.`, { body: `[${data.userSize}명 온라인]`, icon: `https://api.dicebear.com/6.x/identicon/svg?seed=${data.username}` });
 	chatList.appendChild(notiDiv);
 });
 
 socket.on("userLefted", data => {
-	const notiDiv = createNotiElement(`${data.username} 이(가) 퇴장했습니다. [${data.userSize}명 온라인]`);
+
+
+
+
+
+	// TODO 6: createNotiElement 함수의 매개변수로 변수와 상수 부분에서 배웠던 백틱을 활용해서 data.username과 data.userSize 변수를 포함하는 문자열을 넣어주세요.
+	// `${data.username} ${data.userSize}`
+	const notiDiv = createNotiElement(이 곳에 코드를 작성해주세요);
+
+
+
+
+
 	new Notification(`${data.username} 이(가) 퇴장했습니다.`, { body: `[${data.userSize}명 온라인]`, icon: `https://api.dicebear.com/6.x/identicon/svg?seed=${data.username}` });
 	chatList.appendChild(notiDiv);
 });
@@ -154,6 +178,17 @@ submitMessageForm.addEventListener("submit", e => {
 	if (message.trim().length <= 0) return (submitMessageForm.querySelector("input").value = "");
 
 	appendChatMessage(message, userdata.username);
-	socket.emit("message", message);
+
+
+
+
+	// TODO 7: 송신 메소드 중 emit을 사용해서 'message' 이라는 이름을 가진 메세지를 모든 클라이언트에게 보내는 코드를 작성하세요.
+	// 들어갈 데이터로는 message 변수를 넣어주세요.
+	이 곳에 코드를 작성해주세요
+
+
+
+
+
 	submitMessageForm.querySelector("input").value = "";
 });
