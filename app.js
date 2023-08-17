@@ -31,7 +31,7 @@ io.on("connection", async socket => {
 
 
 
-		// TODO 1: 송신 메소드 중 emit을 사용해서 'rename' 이라는 이름을 가진 메세지를 모든 클라이언트에게 보내는 코드를 작성하세요.
+		// TODO 1: 송신 메소드 중 emit을 사용해서 'rename' 이라는 이름을 가진 메세지를 메세지를 전송한 클라이언트에게 보내는 코드를 작성하세요.
 		// 들어갈 데이터로는 { username: socket.username } 객체를 넣어주세요.
 		이 곳에 코드를 작성해주세요
 
